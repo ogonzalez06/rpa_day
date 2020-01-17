@@ -54,10 +54,10 @@
         </property>
         <property name="enabled" idref="1"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element class="String">name</element>
+          <element class="String" id="4">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="4">
+      <object class="Transition" serializationversion="3" id="5">
         <property name="name" class="String">Do Nothing</property>
         <property name="stepAction" class="DoNothing"/>
         <property name="elementFinders" class="ElementFinders"/>
@@ -68,7 +68,20 @@
         <property name="enabled" idref="1"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="5"/>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String">ok</property>
+        <property name="stepAction" class="DoNothing"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="1"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element idref="4"/>
+        </property>
+      </object>
+      <object class="End" id="7"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -78,11 +91,15 @@
       </object>
       <object class="TransitionEdge">
         <from idref="3"/>
-        <to idref="4"/>
+        <to idref="5"/>
       </object>
       <object class="TransitionEdge">
-        <from idref="4"/>
-        <to idref="5"/>
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="7"/>
       </object>
     </edges>
   </property>
