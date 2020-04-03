@@ -56,7 +56,7 @@
         </snippetStepComment>
       </object>
       <object class="Transition" serializationversion="3" id="4">
-        <property name="name" class="String">Prueba GIT</property>
+        <property name="name" class="String">Prueba GITHUB</property>
         <property name="stepAction" class="DoNothing"/>
         <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
