@@ -56,7 +56,7 @@
         </snippetStepComment>
       </object>
       <object class="Transition" serializationversion="3" id="4">
-        <property name="name" class="String">Prueba GIT</property>
+        <property name="name" class="String">Prueba GITHUB</property>
         <property name="stepAction" class="DoNothing"/>
         <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -68,7 +68,18 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="5"/>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">Do Nothing</property>
+        <property name="stepAction" class="DoNothing"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="1"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="End" id="6"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -83,6 +94,10 @@
       <object class="TransitionEdge">
         <from idref="4"/>
         <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
       </object>
     </edges>
   </property>
