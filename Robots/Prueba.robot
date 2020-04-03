@@ -7,7 +7,9 @@
     <comment/>
     <tags/>
     <referenced-types/>
-    <referenced-snippets/>
+    <referenced-snippets>
+      <snippet name="Snippet"/>
+    </referenced-snippets>
     <triggers/>
     <typed-variables/>
     <global-variables/>
@@ -44,8 +46,17 @@
   <property name="transitionGraph" class="Body">
     <blockBeginStep class="BlockBeginStep" id="2"/>
     <steps class="ArrayList">
-      <object class="Transition" serializationversion="3" id="3">
-        <property name="name" class="String">Do Nothing - Prueba Ambiente</property>
+      <object class="SnippetStep" id="3">
+        <name>
+          <null/>
+        </name>
+        <snippetName class="String">Snippet</snippetName>
+        <snippetStepComment>
+          <null/>
+        </snippetStepComment>
+      </object>
+      <object class="Transition" serializationversion="3" id="4">
+        <property name="name" class="String">Prueba GIT</property>
         <property name="stepAction" class="DoNothing"/>
         <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -57,7 +68,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="End" id="4"/>
+      <object class="End" id="5"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -68,6 +79,10 @@
       <object class="TransitionEdge">
         <from idref="3"/>
         <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="5"/>
       </object>
     </edges>
   </property>
