@@ -71,7 +71,7 @@
       <object class="Transition" serializationversion="3" id="5">
         <property name="name" class="String">Do Nothing</property>
         <property name="stepAction" class="DoNothing"/>
-        <property name="elementFinders" class="ElementFinders"/>
+        <property name="elementFinders" class="ElementFinders" id="6"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -79,7 +79,7 @@
         <property name="enabled" idref="1"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="6">
+      <object class="Transition" serializationversion="3" id="7">
         <property name="name" class="String">Cambio 7</property>
         <property name="stepAction" class="DoNothing"/>
         <property name="elementFinders" class="ElementFinders"/>
@@ -89,23 +89,23 @@
         </property>
         <property name="enabled" idref="1"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element class="String">name</element>
+          <element class="String" id="8">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="7">
+      <object class="Transition" serializationversion="3" id="9">
         <property name="name" class="String">Cambio 8</property>
         <property name="stepAction" class="DoNothing"/>
-        <property name="elementFinders" class="ElementFinders"/>
+        <property name="elementFinders" idref="6"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
         </property>
         <property name="enabled" idref="1"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element class="String">name</element>
+          <element idref="8"/>
         </property>
       </object>
-      <object class="End" id="8"/>
+      <object class="End" id="10"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -123,15 +123,15 @@
       </object>
       <object class="TransitionEdge">
         <from idref="5"/>
-        <to idref="6"/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="6"/>
         <to idref="7"/>
       </object>
       <object class="TransitionEdge">
         <from idref="7"/>
-        <to idref="8"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
       </object>
     </edges>
   </property>
