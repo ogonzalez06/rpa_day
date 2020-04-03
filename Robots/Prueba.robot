@@ -105,7 +105,20 @@
           <element idref="8"/>
         </property>
       </object>
-      <object class="End" id="10"/>
+      <object class="Transition" serializationversion="3" id="10">
+        <property name="name" class="String">Cambio 9</property>
+        <property name="stepAction" class="DoNothing"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="1"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="End" id="11"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -132,6 +145,10 @@
       <object class="TransitionEdge">
         <from idref="9"/>
         <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
       </object>
     </edges>
   </property>
